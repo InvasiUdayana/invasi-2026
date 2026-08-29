@@ -134,13 +134,6 @@ const nextConfig = {
         permanent: true,
       },
 
-      // Talkshow & Webinar Nasional (TWN)
-      {
-        source: "/PendaftaranTWN2026",
-        destination: "https://forms.gle/aai617RmLzMGzqaY8",
-        permanent: true,
-      },
-
       // Booklet / Guideline Lomba
       {
         source: "/guidelineinvasi2026",
