@@ -173,7 +173,7 @@ const nextConfig = {
       },
       //TWN INVASI 2026
       {
-        source: "/pendaftaranTWNinvasi2026",
+        source: "/PendaftaranTWNinvasi2026",
         destination: "https://forms.gle/W1ksF6hk7kecEjUt9",
         permanent: true,
       },
