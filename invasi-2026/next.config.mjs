@@ -43,12 +43,6 @@ const nextConfig = {
         permanent: true,
       },
 
-      {
-        source: "/PendaftaranTWNInvasi2026",
-        destination: "https://forms.gle/W1ksF6hk7kecEjUt9",
-        permanent: true,
-      },
-
       // Pengumpulan Karya
       {
         source: "/PengumpulanEsaiSiswa",
@@ -175,6 +169,12 @@ const nextConfig = {
         source: "/GuidelineInfografis",
         destination:
           "https://drive.google.com/drive/folders/1HxMJqzIldiYFq4DCjf5pABHcgnuVy5H8?usp=drive_link",
+        permanent: true,
+      },
+      //TWN INVASI 2026
+      {
+        source: "/PendaftaranTWNInvasi2026",
+        destination: "https://forms.gle/W1ksF6hk7kecEjUt9",
         permanent: true,
       },
     ];
