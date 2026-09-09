@@ -1,32 +1,48 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function TwnPage() {
   return (
-    <main className="flex min-height-[80vh] flex-col items-center justify-center py-20 px-5 text-center">
-      {/* Logo INVASI di atas */}
-      <div className="mb-8 animate-bounce">
+    <main className="relative left-1/2 min-h-screen w-screen -translate-x-1/2 flex flex-col items-center px-4 pt-28 pb-20 overflow-hidden">
+      {/* LOGO */}
+      <div className="flex w-full justify-center mb-8 animate-logo">
         <Image
-          src="/favicon.ico" // Menggunakan logo yang barusan kamu ganti
+          src="/aset/logo.webp"
           alt="Logo INVASI 2026"
-          width={150}
-          height={150}
-          className="mx-auto"
+          width={220}
+          height={220}
+          priority
+          className="h-auto w-[180px] md:w-[220px] drop-shadow-2xl"
         />
       </div>
 
-      {/* Teks Utama */}
-      <h1 className="text-5xl md:text-8xl font-bold text-white tracking-tighter mb-4">
-        COMING SOON
-      </h1>
+      {/* PAMFLET */}
+      <div className="flex w-full justify-center animate-pamflet">
+        <div className="relative group w-full max-w-[600px] overflow-hidden rounded-2xl border border-white/10 shadow-2xl transition-all duration-300 hover:scale-[1.02]">
+          <Link
+            href="https://docs.google.com/forms/d/e/1FAIpQLSeQLk2L--XqIStEf3CnkIYPMSWIBu8RfaJswRqxTDjPisR0vQ/viewform"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative block w-full"
+          >
+            <Image
+              src="/aset/TWN.webp"
+              alt="Pamflet Talkshow & Webinar Nasional INVASI 2026"
+              width={800}
+              height={1000}
+              priority
+              className="h-auto w-full object-cover"
+            />
 
-      {/* Teks Tambahan */}
-      <p className="text-gray-400 text-lg md:text-2xl max-w-2xl mx-auto">
-        Talkshow & Webinar Nasional INVASI 2026 sedang dalam perjalanan. Siapkan
-        dirimu untuk ilmu dan inspirasi yang luar biasa!
-      </p>
-
-      {/* Dekorasi Estetik (Opsional) */}
-      <div className="mt-10 w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>
+            {/* Overlay */}
+            <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+              <span className="translate-y-4 rounded-full bg-blue-600 px-6 py-3 text-lg font-bold text-white shadow-lg transition-all duration-300 group-hover:translate-y-0">
+                Klik untuk Mendaftar 🚀
+              </span>
+            </div>
+          </Link>
+        </div>
+      </div>
     </main>
   );
 }
